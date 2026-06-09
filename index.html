@@ -129,12 +129,25 @@
         <p class="section-kicker purple"><span>03</span> Demo</p>
         <h2>Listen to the pipeline in action</h2>
         <p>Enter a sentence, generate synthetic child-like voices, and listen to how different voices sound.</p>
-        <label for="sentenceInput">Enter a sentence</label>
-        <input id="sentenceInput" value="Please open your book." />
-        <div class="button-row">
-          <button class="primary" id="generateBtn">▶ Generate Voices</button>
-          <button class="secondary" id="resetBtn">↻ Reset</button>
-        </div>
+        <label for="sentenceSelect">Select a source sentence</label>
+        <select id="sentenceSelect" class="demo-select">
+          <option value="s1">S1 — Ben packed two blue toys and took a big red kite.</option>
+          <option value="s2">S2 — The small green frog jumped under the wooden bridge.</option>
+          <option value="s3">S3 — She found three shiny coins beside the quiet yellow boat.</option>
+          <option value="s4">S4 — Tom called the dog, but the bird stayed near the tall tree.</option>
+          <option value="s5">S5 — A boy saw five brown leaves falling into the cool pond.</option>
+        </select>
+
+      <label for="adultVoiceSelect">Select adult TTS source voice</label>
+      <select id="adultVoiceSelect" class="demo-select">
+          <option value="female">Female adult TTS</option>
+          <option value="male">Male adult TTS</option>
+      </select>
+
+      <div class="button-row">
+        <button class="primary" id="generateBtn">▶ Generate Voices</button>
+        <button class="secondary" id="resetBtn">↻ Reset</button>
+      </div>
       </div>
 
       <div class="demo-flow reveal delay-1">
