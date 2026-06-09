@@ -78,3 +78,20 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.045em;margin:0}h1{font-size:clamp(44p
   line-height: 1.2 !important;
   margin-top: 5px;
 }
+
+.site-header .thesis-brand .thesis-title .thesis-title-main {
+  display: block !important;
+  color: #111827 !important;
+  font-weight: 800 !important;
+  font-size: 2rem !important;
+  line-height: 1.05 !important;
+}
+
+.site-header .thesis-brand .thesis-title .thesis-title-sub {
+  display: block !important;
+  color: #111827 !important;
+  font-weight: 400 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.15 !important;
+  margin-top: 6px !important;
+}
