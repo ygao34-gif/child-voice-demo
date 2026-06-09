@@ -32,136 +32,258 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.045em;margin:0}h1{font-size:clamp(44p
 @media (max-width:650px){.section-panel{padding:44px 20px}.site-header{padding:12px 16px}.header-cta{display:none}.brand span{font-size:14px}h1{font-size:40px}.problem-cards,.voice-grid,.insight-grid,.site-footer{grid-template-columns:1fr}.demo-flow{flex-direction:column}.arrow{transform:rotate(90deg)}.pipeline-wrap{flex-direction:column;overflow:visible}.flow-line{top:30px;bottom:30px;left:50%;width:4px;height:auto;right:auto;background:linear-gradient(180deg,transparent,var(--purple),var(--green),var(--orange),var(--pink),var(--blue),transparent);background-size:100% 200%}.pipe-card,.mini-stage{width:100%}}
 
 /* Thesis header update */
-.thesis-brand{min-width:0;max-width:780px;align-items:center}.thesis-brand .rug-logo{width:300px;height:auto;border-radius:0;object-fit:contain;flex:0 0 auto}.thesis-title{font-size:clamp(15px,1.25vw,22px);line-height:1.12;letter-spacing:-.035em}.thesis-title strong{color:var(--purple)}
-.micro-lead{font-size:16px;color:#585b72;max-width:660px;margin-top:-4px}
-.problem-cards article{cursor:pointer;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}.problem-cards article:hover,.problem-cards article:focus{transform:translateY(-6px);border-color:rgba(112,71,232,.45);box-shadow:0 24px 60px rgba(112,71,232,.18);outline:0}.problem-cards h3{font-size:19px;letter-spacing:-.025em;margin:4px 0 8px}.problem-cards p{color:#55566a;margin:0}.expand-card::after{content:"Click";display:inline-flex;margin-top:14px;padding:6px 10px;border-radius:999px;background:#f3efff;color:var(--purple);font-weight:900;font-size:12px}
-.card-modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .22s ease}.card-modal.open{opacity:1;pointer-events:auto}.modal-backdrop{position:absolute;inset:0;background:rgba(16,14,35,.46);backdrop-filter:blur(8px)}.modal-box{position:relative;width:min(760px,calc(100vw - 40px));min-height:300px;background:#fff;border-radius:32px;padding:52px;box-shadow:0 40px 90px rgba(16,14,35,.35);transform:scale(.94) translateY(12px);transition:transform .24s ease;border:1px solid rgba(112,71,232,.18);text-align:center}.card-modal.open .modal-box{transform:scale(1) translateY(0)}.modal-box h2{font-size:clamp(32px,4vw,56px);color:var(--purple);margin-bottom:24px}.modal-box p{font-size:clamp(22px,2.5vw,34px);line-height:1.35;margin:0 auto;color:#1b1b35;max-width:660px;font-weight:750}.modal-box small{display:block;margin-top:28px;color:var(--muted)}.modal-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border:0;border-radius:50%;background:#f2edff;color:var(--purple);font-size:30px;line-height:1;cursor:pointer;font-weight:600}
-@media (max-width:1100px){.thesis-brand .rug-logo{width:128px}.site-header{align-items:flex-start}.thesis-title{font-size:15px}.thesis-brand{max-width:100%}}
-@media (max-width:650px){.thesis-brand .rug-logo{width:96px}.thesis-title{font-size:12px}.modal-box{padding:36px 24px}.modal-box p{font-size:22px}}
-
-.brand img,
-.brand-logo,
-.logo img,
-.nav-logo {
-  width: 300px !important;
-  height: auto !important;
-  max-width: none !important;
-  border-radius: 0 !important;
-  object-fit: contain !important;
+.thesis-brand {
+  min-width: 0;
+  max-width: 620px;
+  align-items: center;
+  gap: 18px;
+  flex: 0 0 auto;
 }
-.rug-logo {
-  width: 300px !important;
-  height: auto !important;
-  max-width: none !important;
-  border-radius: 0 !important;
-  object-fit: contain !important;
+
+.thesis-brand .rug-logo {
+  width: 260px;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+  flex: 0 0 auto;
+  max-width: none;
 }
 
 .thesis-title {
-  color: #111827 !important;
-  line-height: 1.18 !important;
-}
-
-.thesis-title-main {
   display: block;
-  color: #111827 !important;
-  font-weight: 800 !important;
-  font-size: 1.65rem !important;
-  line-height: 1.1 !important;
-}
-
-.thesis-title-sub {
-  display: block;
-  color: #111827 !important;
-  font-weight: 400 !important;
-  font-size: 1.05rem !important;
-  line-height: 1.2 !important;
-  margin-top: 5px;
-}
-
-.site-header .thesis-brand .thesis-title .thesis-title-main {
-  display: block !important;
-  color: #111827 !important;
-  font-weight: 800 !important;
-  font-size: 2rem !important;
-  line-height: 1.05 !important;
-}
-
-.site-header .thesis-brand .thesis-title .thesis-title-sub {
-  display: block !important;
-  color: #111827 !important;
-  font-weight: 400 !important;
-  font-size: 1.25rem !important;
-  line-height: 1.15 !important;
-  margin-top: 6px !important;
-}
-
-.site-header .thesis-brand .thesis-title {
-  display: block !important;
-  max-width: 980px !important;
-  color: #111827 !important;
-  line-height: 1.1 !important;
+  color: #111827;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .site-header .thesis-brand .thesis-title-main {
-  font-size: 20px !important;
-  font-weight: 800 !important;
-  line-height: 1.05 !important;
-  color: #111827 !important;
+  display: block;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.05;
 }
 
 .site-header .thesis-brand .thesis-title-sub {
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  line-height: 1.18 !important;
-  color: #111827 !important;
-  margin-top: 4px !important;
+  display: block;
+  color: #111827;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  margin-top: 4px;
 }
 
-.hero-thesis-title {
-  margin: 18px 0 18px !important;
-  line-height: 1.08 !important;
-  max-width: 640px !important;
-}
-
-.hero-thesis-main {
-  display: block !important;
-  font-size: 58px !important;
-  font-weight: 850 !important;
-  line-height: 1.02 !important;
-  color: #6d4aff !important;
-}
-
-.hero-thesis-sub {
-  display: block !important;
-  margin-top: 14px !important;
-  font-size: 34px !important;
-  font-weight: 500 !important;
-  line-height: 1.12 !important;
-  color: #111827 !important;
-}
-
+/* Hero thesis title */
 .hero-copy .hero-thesis-title {
-  margin: 18px 0 22px !important;
-  max-width: 620px !important;
-  line-height: normal !important;
+  margin: 18px 0 22px;
+  max-width: 620px;
+  line-height: normal;
 }
 
 .hero-copy .hero-thesis-title .hero-thesis-main {
-  display: block !important;
-  color: #6d4aff !important;
-  font-size: 50px !important;
-  font-weight: 850 !important;
-  line-height: 1.05 !important;
-  letter-spacing: -1.2px !important;
+  display: block;
+  color: #6d4aff;
+  font-size: 44px;
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: -1px;
 }
 
 .hero-copy .hero-thesis-title .hero-thesis-sub {
-  display: block !important;
-  color: #111827 !important;
-  font-size: 27px !important;
-  font-weight: 500 !important;
-  line-height: 1.18 !important;
-  letter-spacing: -0.4px !important;
-  margin-top: 14px !important;
+  display: block;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.3px;
+  margin-top: 12px;
+}
+
+/* Extra lead under hero */
+.micro-lead {
+  font-size: 16px;
+  color: #585b72;
+  max-width: 660px;
+  margin-top: -4px;
+}
+
+/* Expandable problem cards */
+.problem-cards article {
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.problem-cards article:hover,
+.problem-cards article:focus {
+  transform: translateY(-6px);
+  border-color: rgba(112,71,232,.45);
+  box-shadow: 0 24px 60px rgba(112,71,232,.18);
+  outline: 0;
+}
+
+.problem-cards h3 {
+  font-size: 19px;
+  letter-spacing: -0.025em;
+  margin: 4px 0 8px;
+}
+
+.problem-cards p {
+  color: #55566a;
+  margin: 0;
+}
+
+.expand-card::after {
+  content: "Click";
+  display: inline-flex;
+  margin-top: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f3efff;
+  color: var(--purple);
+  font-weight: 900;
+  font-size: 12px;
+}
+
+/* Card modal */
+.card-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease;
+}
+
+.card-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(16,14,35,.46);
+  backdrop-filter: blur(8px);
+}
+
+.modal-box {
+  position: relative;
+  width: min(760px, calc(100vw - 40px));
+  min-height: 300px;
+  background: #fff;
+  border-radius: 32px;
+  padding: 52px;
+  box-shadow: 0 40px 90px rgba(16,14,35,.35);
+  transform: scale(.94) translateY(12px);
+  transition: transform .24s ease;
+  border: 1px solid rgba(112,71,232,.18);
+  text-align: center;
+}
+
+.card-modal.open .modal-box {
+  transform: scale(1) translateY(0);
+}
+
+.modal-box h2 {
+  font-size: clamp(32px,4vw,56px);
+  color: var(--purple);
+  margin-bottom: 24px;
+}
+
+.modal-box p {
+  font-size: clamp(22px,2.5vw,34px);
+  line-height: 1.35;
+  margin: 0 auto;
+  color: #1b1b35;
+  max-width: 660px;
+  font-weight: 750;
+}
+
+.modal-box small {
+  display: block;
+  margin-top: 28px;
+  color: var(--muted);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: #f2edff;
+  color: var(--purple);
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Responsive adjustments for the thesis header and hero title */
+@media (max-width: 1100px) {
+  .thesis-brand {
+    max-width: 520px;
+    gap: 14px;
+  }
+
+  .thesis-brand .rug-logo {
+    width: 220px;
+  }
+
+  .site-header .thesis-brand .thesis-title-main {
+    font-size: 16px;
+  }
+
+  .site-header .thesis-brand .thesis-title-sub {
+    font-size: 11px;
+    line-height: 1.14;
+  }
+
+  .hero-copy .hero-thesis-title .hero-thesis-main {
+    font-size: 40px;
+  }
+
+  .hero-copy .hero-thesis-title .hero-thesis-sub {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .thesis-brand {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .thesis-brand .rug-logo {
+    width: 150px;
+  }
+
+  .site-header .thesis-brand .thesis-title-main {
+    font-size: 14px;
+  }
+
+  .site-header .thesis-brand .thesis-title-sub {
+    font-size: 10px;
+    line-height: 1.12;
+  }
+
+  .hero-copy .hero-thesis-title .hero-thesis-main {
+    font-size: 34px;
+  }
+
+  .hero-copy .hero-thesis-title .hero-thesis-sub {
+    font-size: 19px;
+  }
+
+  .modal-box {
+    padding: 36px 24px;
+  }
+
+  .modal-box p {
+    font-size: 22px;
+  }
 }
