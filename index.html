@@ -7,16 +7,21 @@
   <meta name="description" content="A one-page graduation thesis demo: synthetic child-like voices for speaker differentiation in a VR classroom context." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand thesis-brand" href="#problem" aria-label="Go to top">
       <img class="rug-logo" src="assets/images/rug-logo.png" alt="University of Groningen logo" />
-        <span class="thesis-title">
-         <span class="thesis-title-main">Campus Fryslân Master’s Thesis</span>
-        
+      <span class="thesis-title">
+        <span class="thesis-title-main">Campus Fryslân Master’s Thesis</span>
+        <span class="thesis-title-sub">
+          To fulfill the requirements for the degree of<br>
+          Master of Science in Speech Technology<br>
+          at the University of Groningen
         </span>
-      
+      </span>
     </a>
+
     <nav class="top-nav" aria-label="Main navigation">
       <a class="active" href="#problem">Problem</a>
       <a href="#solution">Our Solution</a>
@@ -24,6 +29,7 @@
       <a href="#insights">Insights</a>
       <a href="#about">About</a>
     </nav>
+
     <a class="header-cta" href="#demo">▶ Try the Demo</a>
   </header>
 
@@ -31,23 +37,33 @@
     <section id="problem" class="hero section-panel">
       <div class="hero-copy reveal">
         <p class="section-kicker purple"><span>01</span> The Problem</p>
+
         <h1 class="hero-thesis-title">
-            <span class="hero-thesis-main">Speaker Differentiation in Synthetic Child-like Voices:</span>
-            <span class="hero-thesis-sub">Perceptual Validation and UW-Related Acoustic Evidence from a Zero-Shot Voice Conversion Pipeline</span>
+          <span class="hero-thesis-main">Speaker Differentiation in Synthetic Child-like Voices:</span>
+          <span class="hero-thesis-sub">Perceptual Validation and UW-Related Acoustic Evidence from a Zero-Shot Voice Conversion Pipeline</span>
         </h1>
-        <p class="lead">Child-avatar voices need to be perceptually distinct enough for student teachers to notice who is speaking and follow classroom interaction.</p>
-        <p class="micro-lead">This thesis asks what makes synthetic child-like voices sound different from one another, and whether a controlled zero-shot voice conversion pipeline can help study that question.</p>
+
+        <p class="lead">
+          Child-avatar voices need to be perceptually distinct enough for student teachers to notice who is speaking and follow classroom interaction.
+        </p>
+
+        <p class="micro-lead">
+          This thesis asks what makes synthetic child-like voices sound different from one another, and whether a controlled zero-shot voice conversion pipeline can help study that question.
+        </p>
+
         <div class="problem-cards">
           <article class="expand-card" role="button" tabindex="0" data-modal-title="Avatar voice identity" data-modal-text="Multiple child avatars need voices that are child-like, distinct, and ethically usable.">
             <div class="card-icon purple-bg">👥</div>
             <h3>Avatar voice identity</h3>
             <p>Click to expand</p>
           </article>
+
           <article class="expand-card" role="button" tabindex="0" data-modal-title="Synthetic voices as a solution" data-modal-text="Synthetic voice generation is controllable, scalable, and flexible, offering an alternative to large-scale real child voice collection.">
             <div class="card-icon yellow-bg">⬡</div>
             <h3>Synthetic voices as a solution</h3>
             <p>Click to expand</p>
           </article>
+
           <article class="expand-card" role="button" tabindex="0" data-modal-title="Academic value" data-modal-text="What makes child-like voices sound different from one another?">
             <div class="card-icon pink-bg">▮▮▮</div>
             <h3>Academic value</h3>
@@ -59,6 +75,7 @@
       <div class="hero-visual reveal delay-1">
         <img src="assets/images/classroom-hero.png" alt="Toy-like classroom scene with child avatars saying the same sentence" />
         <div class="vr-label">Order in the Classroom (VR)</div>
+
         <div class="guidance-card floating">
           <p>Design guidance for VR</p>
           <div><span>🎧</span> Same voice stability</div>
@@ -80,38 +97,52 @@
 
       <div id="pipeline" class="pipeline-wrap reveal delay-1" aria-label="Voice generation and evaluation pipeline">
         <div class="flow-line"></div>
+
         <button class="pipe-card" data-stage="motivation">
-          <span class="icon">💡</span><strong>Motivation</strong>
+          <span class="icon">💡</span>
+          <strong>Motivation</strong>
         </button>
+
         <button class="pipe-card" data-stage="pipeline">
-          <span class="icon">〽️</span><strong>Voice Generation Pipeline</strong>
+          <span class="icon">〽️</span>
+          <strong>Voice Generation Pipeline</strong>
         </button>
+
         <div class="pipe-stack">
           <button class="mini-stage" data-stage="text">📄 Text</button>
-          <button class="mini-stage" data-stage="tts" data-audio="tts-adult.wav">🔊 TTS</button>
-          <button class="mini-stage" data-stage="source" data-audio="source-speech.wav">〽️ Source Speech</button>
-          <button class="mini-stage" data-stage="target" data-audio="target-reference.wav">👤 Target Voice</button>
+          <button class="mini-stage" data-stage="tts">🔊 TTS</button>
+          <button class="mini-stage" data-stage="source">〽️ Source Speech</button>
+          <button class="mini-stage" data-stage="target">👤 Target Voice</button>
           <button class="mini-stage" data-stage="seed">✨ Seed-VC</button>
-          <button class="mini-stage output" data-stage="synthetic" data-audio="child-a.wav">🧒 Synthetic Child-like Stimuli</button>
+          <button class="mini-stage output" data-stage="synthetic">🧒 Synthetic Child-like Stimuli</button>
         </div>
+
         <button class="pipe-card" data-stage="listening">
-          <span class="icon">🎧</span><strong>Listening Test</strong>
+          <span class="icon">🎧</span>
+          <strong>Listening Test</strong>
         </button>
+
         <button class="pipe-card" data-stage="broad">
-          <span class="icon">🔍</span><strong>Pilot / Broad Acoustic Exploration</strong>
+          <span class="icon">🔍</span>
+          <strong>Pilot / Broad Acoustic Exploration</strong>
         </button>
+
         <button class="pipe-card focus" data-stage="uw">
-          <span class="icon">▮▮▮</span><strong>Focused UW Related Vowel Study</strong>
+          <span class="icon">▮▮▮</span>
+          <strong>Focused UW Related Vowel Study</strong>
         </button>
+
         <button class="pipe-card outcome" data-stage="evidence">
-          <span class="icon">📈</span><strong>Supporting Computational Evidence</strong>
+          <span class="icon">📈</span>
+          <strong>Supporting Computational Evidence</strong>
         </button>
+
         <button class="adult-control" data-stage="adult">👤 Adult Control</button>
       </div>
 
       <aside class="stage-panel reveal" id="stagePanel" aria-live="polite">
         <strong>Click a pipeline stage</strong>
-        <p>Select any block to show its role. Stages with sound icons will play placeholder audio until you replace the files with your real thesis demo clips.</p>
+        <p>Select any block to show its role. The demo section below lets you choose a sentence, adult TTS source voice, target voice, and synthetic child-like output.</p>
       </aside>
 
       <div class="legend reveal">
@@ -128,7 +159,8 @@
       <div class="demo-intro reveal">
         <p class="section-kicker purple"><span>03</span> Demo</p>
         <h2>Listen to the pipeline in action</h2>
-        <p>Enter a sentence, generate synthetic child-like voices, and listen to how different voices sound.</p>
+        <p>Select one fixed source sentence, choose an adult TTS source voice, then listen to the source speech, target child voice, and converted synthetic child voice.</p>
+
         <label for="sentenceSelect">Select a source sentence</label>
         <select id="sentenceSelect" class="demo-select">
           <option value="s1">S1 — Ben packed two blue toys and took a big red kite.</option>
@@ -138,53 +170,76 @@
           <option value="s5">S5 — A boy saw five brown leaves falling into the cool pond.</option>
         </select>
 
-      <label for="adultVoiceSelect">Select adult TTS source voice</label>
-      <select id="adultVoiceSelect" class="demo-select">
+        <label for="adultVoiceSelect">Select adult TTS source voice</label>
+        <select id="adultVoiceSelect" class="demo-select">
           <option value="female">Female adult TTS</option>
           <option value="male">Male adult TTS</option>
-      </select>
+        </select>
 
-      <div class="button-row">
-        <button class="primary" id="generateBtn">▶ Generate Voices</button>
-        <button class="secondary" id="resetBtn">↻ Reset</button>
-      </div>
+        <div class="button-row">
+          <button class="primary" id="generateBtn">▶ Generate Voices</button>
+          <button class="secondary" id="resetBtn">↻ Reset</button>
+        </div>
       </div>
 
       <div class="demo-flow reveal delay-1">
-        <div class="demo-step"><span>📄</span><strong>1. Text</strong></div>
+        <div class="demo-step" id="textStep" title="Selected source sentence">
+          <span>📄</span>
+          1. Text
+        </div>
+
         <div class="arrow">→</div>
-        <div class="demo-step playable" data-audio="tts-adult.wav"><span>🔊</span><strong>2. TTS<br/>(Adult)</strong></div>
+
+        <div class="demo-step" id="ttsStep" title="Selected adult TTS voice">
+          <span>🔊</span>
+          2. TTS<br>(Adult)
+        </div>
+
         <div class="arrow">→</div>
-        <div class="demo-step playable" data-audio="source-speech.wav"><span>〽️</span><strong>3. Source<br/>Speech</strong></div>
+
+        <div class="demo-step playable" id="sourceSpeechStep" title="Click to play selected adult source speech">
+          <span>〰️</span>
+          3. Source<br>Speech
+        </div>
+
         <div class="arrow">→</div>
-        <div class="demo-step conversion"><span>✨</span><strong>4. Seed-VC</strong></div>
+
+        <div class="demo-step" id="seedVcStep" title="Seed-VC conversion stage">
+          <span>✨</span>
+          4. Seed-VC
+        </div>
       </div>
 
       <div class="voice-board reveal delay-2">
         <h3>5. Synthetic Child-like Voices</h3>
+        <p class="voice-board-note">Click the avatar image to hear the target/reference voice. Click the button to hear the converted synthetic child voice for the selected sentence.</p>
+
         <div class="voice-grid">
-          <article class="voice-card" data-audio="child-a.wav">
-            <img src="assets/images/child-a.png" alt="Child voice A avatar" />
+          <article class="voice-card" data-child="A">
+            <img class="target-voice-img" src="assets/images/child-a.png" alt="Child A target voice avatar" />
             <strong>Child A</strong>
-            <button>▶ Play</button>
+            <button class="synthetic-btn" type="button">▶ Synthetic child voice</button>
             <div class="wave"></div>
           </article>
-          <article class="voice-card" data-audio="child-b.wav">
-            <img src="assets/images/child-b.png" alt="Child voice B avatar" />
+
+          <article class="voice-card" data-child="B">
+            <img class="target-voice-img" src="assets/images/child-b.png" alt="Child B target voice avatar" />
             <strong>Child B</strong>
-            <button>▶ Play</button>
+            <button class="synthetic-btn" type="button">▶ Synthetic child voice</button>
             <div class="wave"></div>
           </article>
-          <article class="voice-card" data-audio="child-c.wav">
-            <img src="assets/images/child-c.png" alt="Child voice C avatar" />
+
+          <article class="voice-card" data-child="C">
+            <img class="target-voice-img" src="assets/images/child-c.png" alt="Child C target voice avatar" />
             <strong>Child C</strong>
-            <button>▶ Play</button>
+            <button class="synthetic-btn" type="button">▶ Synthetic child voice</button>
             <div class="wave"></div>
           </article>
-          <article class="voice-card" data-audio="child-d.wav">
-            <img src="assets/images/child-d.png" alt="Child voice D avatar" />
+
+          <article class="voice-card" data-child="D">
+            <img class="target-voice-img" src="assets/images/child-d.png" alt="Child D target voice avatar" />
             <strong>Child D</strong>
-            <button>▶ Play</button>
+            <button class="synthetic-btn" type="button">▶ Synthetic child voice</button>
             <div class="wave"></div>
           </article>
         </div>
@@ -196,11 +251,31 @@
         <p class="section-kicker orange"><span>04</span> Insights</p>
         <p>This study helps identify which acoustic dimensions are most informative for speaker differentiation in children, and how synthetic speech can advance both research and applications.</p>
       </div>
+
       <div class="insight-grid">
-        <article class="reveal"><span>〽️</span><h3>Acoustic Cues</h3><p>Discover which acoustic features support child speaker differentiation.</p></article>
-        <article class="reveal delay-1"><span>🧒</span><h3>Voice Identity</h3><p>Examine how children’s voices are perceived as same or different.</p></article>
-        <article class="reveal delay-2"><span>📈</span><h3>Method Validation</h3><p>Check whether computational methods align with human perception.</p></article>
-        <article class="reveal delay-3"><span>🧩</span><h3>Practical Impact</h3><p>Inform VR design and future child speech technology development.</p></article>
+        <article class="reveal">
+          <span>〽️</span>
+          <h3>Acoustic Cues</h3>
+          <p>Discover which acoustic features support child speaker differentiation.</p>
+        </article>
+
+        <article class="reveal delay-1">
+          <span>🧒</span>
+          <h3>Voice Identity</h3>
+          <p>Examine how children’s voices are perceived as same or different.</p>
+        </article>
+
+        <article class="reveal delay-2">
+          <span>📈</span>
+          <h3>Method Validation</h3>
+          <p>Check whether computational methods align with human perception.</p>
+        </article>
+
+        <article class="reveal delay-3">
+          <span>🧩</span>
+          <h3>Practical Impact</h3>
+          <p>Inform VR design and future child speech technology development.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -213,6 +288,7 @@
       </a>
       <p>Understanding speaker differentiation in the child voice space using synthetic child-like speech.</p>
     </div>
+
     <div>
       <h4>Quick Links</h4>
       <a href="#problem">Problem</a>
@@ -220,10 +296,12 @@
       <a href="#demo">Demo</a>
       <a href="#insights">Insights</a>
     </div>
+
     <div>
       <h4>Project</h4>
       <p>Graduation Thesis Project<br/>Campus Fryslân – MSc Speech Technology<br/>Yuxiang Gao</p>
     </div>
+
     <div class="qr-card">
       <div class="fake-qr" aria-hidden="true"></div>
       <p>Replace this with your real GitHub QR code.</p>
@@ -232,6 +310,7 @@
 
   <div class="card-modal" id="cardModal" aria-hidden="true">
     <div class="modal-backdrop" data-close-modal></div>
+
     <article class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" type="button" aria-label="Close expanded card" data-close-modal>×</button>
       <h2 id="modalTitle">Title</h2>
