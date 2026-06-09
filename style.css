@@ -95,3 +95,27 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.045em;margin:0}h1{font-size:clamp(44p
   line-height: 1.15 !important;
   margin-top: 6px !important;
 }
+
+.site-header .thesis-brand .thesis-title {
+  display: block !important;
+  max-width: 980px !important;
+  color: #111827 !important;
+  line-height: 1.1 !important;
+}
+
+.site-header .thesis-brand .thesis-title-main {
+  display: block !important;
+  color: #111827 !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  line-height: 1.05 !important;
+}
+
+.site-header .thesis-brand .thesis-title-sub {
+  display: block !important;
+  color: #111827 !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  margin-top: 6px !important;
+}
