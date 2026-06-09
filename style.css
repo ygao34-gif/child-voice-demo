@@ -66,13 +66,15 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.045em;margin:0}h1{font-size:clamp(44p
   display: block;
   color: #111827 !important;
   font-weight: 800 !important;
-  font-size: 1.15rem !important;
+  font-size: 1.65rem !important;
+  line-height: 1.1 !important;
 }
 
 .thesis-title-sub {
   display: block;
   color: #111827 !important;
   font-weight: 400 !important;
-  font-size: 0.78rem !important;
-  margin-top: 3px;
+  font-size: 1.05rem !important;
+  line-height: 1.2 !important;
+  margin-top: 5px;
 }
