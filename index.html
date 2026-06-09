@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Child Voice Differentiation</title>
+  <meta name="description" content="A one-page graduation thesis demo: synthetic child-like voices for speaker differentiation in a VR classroom context." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#problem" aria-label="Go to top">
+      <img src="assets/images/logo-avatar.png" alt="Child Voice Differentiation logo" />
+      <span>Child <strong>Voice</strong><br/>Differentiation</span>
+    </a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="active" href="#problem">Problem</a>
+      <a href="#solution">Our Solution</a>
+      <a href="#demo">Demo</a>
+      <a href="#insights">Insights</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#demo">▶ Try the Demo</a>
+  </header>
+
+  <main>
+    <section id="problem" class="hero section-panel">
+      <div class="hero-copy reveal">
+        <p class="section-kicker purple"><span>01</span> The Problem</p>
+        <h1>Children sound similar.<br/>But how are they <em>actually different?</em></h1>
+        <p class="lead">To create believable and distinct child avatars in VR classroom scenarios, we need a deeper understanding of how child-like voices differ from one another.</p>
+        <div class="problem-cards">
+          <article>
+            <div class="card-icon purple-bg">👥</div>
+            <p>Multiple child avatars need voices that are <strong>child-like, distinct, and ethically usable.</strong></p>
+          </article>
+          <article>
+            <div class="card-icon yellow-bg">⬡</div>
+            <p>Synthetic voices offer a promising way to generate voice options for different child avatars.</p>
+          </article>
+          <article>
+            <div class="card-icon pink-bg">▮▮▮</div>
+            <p>Promising for distinct avatars, but voice identity consistency needs improvement.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay-1">
+        <img src="assets/images/classroom-hero.png" alt="Toy-like classroom scene with child avatars saying the same sentence" />
+        <div class="vr-label">Order in the Classroom (VR)</div>
+        <div class="guidance-card floating">
+          <p>Design guidance for VR</p>
+          <div><span>🎧</span> Same voice stability</div>
+          <div><span>〽️</span> Better naturalness</div>
+          <div><span>👥</span> Clearer avatar differences</div>
+          <div><span>⚡</span> Instant result</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="solution section-panel">
+      <div class="section-copy reveal">
+        <p class="section-kicker green"><span>02</span> Our Solution</p>
+        <h2>A study pipeline to explore speaker differentiation in the <em>child voice space</em></h2>
+        <p>We create controlled synthetic child-like voices and examine which acoustic cues and perceptions support speaker differentiation.</p>
+        <a class="green-button" href="#pipeline">Explore the Pipeline ↓</a>
+        <small>Scroll down to see how it works</small>
+      </div>
+
+      <div id="pipeline" class="pipeline-wrap reveal delay-1" aria-label="Voice generation and evaluation pipeline">
+        <div class="flow-line"></div>
+        <button class="pipe-card" data-stage="motivation">
+          <span class="icon">💡</span><strong>Motivation</strong>
+        </button>
+        <button class="pipe-card" data-stage="pipeline">
+          <span class="icon">〽️</span><strong>Voice Generation Pipeline</strong>
+        </button>
+        <div class="pipe-stack">
+          <button class="mini-stage" data-stage="text">📄 Text</button>
+          <button class="mini-stage" data-stage="tts" data-audio="tts-adult.wav">🔊 TTS</button>
+          <button class="mini-stage" data-stage="source" data-audio="source-speech.wav">〽️ Source Speech</button>
+          <button class="mini-stage" data-stage="target" data-audio="target-reference.wav">👤 Target Voice</button>
+          <button class="mini-stage" data-stage="seed">✨ Seed-VC</button>
+          <button class="mini-stage output" data-stage="synthetic" data-audio="child-a.wav">🧒 Synthetic Child-like Stimuli</button>
+        </div>
+        <button class="pipe-card" data-stage="listening">
+          <span class="icon">🎧</span><strong>Listening Test</strong>
+        </button>
+        <button class="pipe-card" data-stage="broad">
+          <span class="icon">🔍</span><strong>Pilot / Broad Acoustic Exploration</strong>
+        </button>
+        <button class="pipe-card focus" data-stage="uw">
+          <span class="icon">▮▮▮</span><strong>Focused UW Related Vowel Study</strong>
+        </button>
+        <button class="pipe-card outcome" data-stage="evidence">
+          <span class="icon">📈</span><strong>Supporting Computational Evidence</strong>
+        </button>
+        <button class="adult-control" data-stage="adult">👤 Adult Control</button>
+      </div>
+
+      <aside class="stage-panel reveal" id="stagePanel" aria-live="polite">
+        <strong>Click a pipeline stage</strong>
+        <p>Select any block to show its role. Stages with sound icons will play placeholder audio until you replace the files with your real thesis demo clips.</p>
+      </aside>
+
+      <div class="legend reveal">
+        <span><i class="purple-line"></i> Input</span>
+        <span><i class="green-line"></i> Processing</span>
+        <span><i class="orange-line"></i> Evaluation</span>
+        <span><i class="pink-line"></i> Focus</span>
+        <span><i class="blue-line"></i> Outcome</span>
+        <span><i class="dash-line"></i> Control / Feedback</span>
+      </div>
+    </section>
+
+    <section id="demo" class="demo section-panel">
+      <div class="demo-intro reveal">
+        <p class="section-kicker purple"><span>03</span> Demo</p>
+        <h2>Listen to the pipeline in action</h2>
+        <p>Enter a sentence, generate synthetic child-like voices, and listen to how different voices sound.</p>
+        <label for="sentenceInput">Enter a sentence</label>
+        <input id="sentenceInput" value="Please open your book." />
+        <div class="button-row">
+          <button class="primary" id="generateBtn">▶ Generate Voices</button>
+          <button class="secondary" id="resetBtn">↻ Reset</button>
+        </div>
+      </div>
+
+      <div class="demo-flow reveal delay-1">
+        <div class="demo-step"><span>📄</span><strong>1. Text</strong></div>
+        <div class="arrow">→</div>
+        <div class="demo-step playable" data-audio="tts-adult.wav"><span>🔊</span><strong>2. TTS<br/>(Adult)</strong></div>
+        <div class="arrow">→</div>
+        <div class="demo-step playable" data-audio="source-speech.wav"><span>〽️</span><strong>3. Source<br/>Speech</strong></div>
+        <div class="arrow">→</div>
+        <div class="demo-step conversion"><span>✨</span><strong>4. Seed-VC</strong></div>
+      </div>
+
+      <div class="voice-board reveal delay-2">
+        <h3>5. Synthetic Child-like Voices</h3>
+        <div class="voice-grid">
+          <article class="voice-card" data-audio="child-a.wav">
+            <img src="assets/images/child-a.png" alt="Child voice A avatar" />
+            <strong>Child A</strong>
+            <button>▶ Play</button>
+            <div class="wave"></div>
+          </article>
+          <article class="voice-card" data-audio="child-b.wav">
+            <img src="assets/images/child-b.png" alt="Child voice B avatar" />
+            <strong>Child B</strong>
+            <button>▶ Play</button>
+            <div class="wave"></div>
+          </article>
+          <article class="voice-card" data-audio="child-c.wav">
+            <img src="assets/images/child-c.png" alt="Child voice C avatar" />
+            <strong>Child C</strong>
+            <button>▶ Play</button>
+            <div class="wave"></div>
+          </article>
+          <article class="voice-card" data-audio="child-d.wav">
+            <img src="assets/images/child-d.png" alt="Child voice D avatar" />
+            <strong>Child D</strong>
+            <button>▶ Play</button>
+            <div class="wave"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="insights section-panel">
+      <div class="insights-copy reveal">
+        <p class="section-kicker orange"><span>04</span> Insights</p>
+        <p>This study helps identify which acoustic dimensions are most informative for speaker differentiation in children, and how synthetic speech can advance both research and applications.</p>
+      </div>
+      <div class="insight-grid">
+        <article class="reveal"><span>〽️</span><h3>Acoustic Cues</h3><p>Discover which acoustic features support child speaker differentiation.</p></article>
+        <article class="reveal delay-1"><span>🧒</span><h3>Voice Identity</h3><p>Examine how children’s voices are perceived as same or different.</p></article>
+        <article class="reveal delay-2"><span>📈</span><h3>Method Validation</h3><p>Check whether computational methods align with human perception.</p></article>
+        <article class="reveal delay-3"><span>🧩</span><h3>Practical Impact</h3><p>Inform VR design and future child speech technology development.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="about" class="site-footer">
+    <div>
+      <a class="brand footer-brand" href="#problem">
+        <img src="assets/images/logo-avatar.png" alt="" />
+        <span>Child <strong>Voice</strong><br/>Differentiation</span>
+      </a>
+      <p>Understanding speaker differentiation in the child voice space using synthetic child-like speech.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#problem">Problem</a>
+      <a href="#solution">Our Solution</a>
+      <a href="#demo">Demo</a>
+      <a href="#insights">Insights</a>
+    </div>
+    <div>
+      <h4>Project</h4>
+      <p>Graduation Thesis Project<br/>Campus Fryslân – MSc Speech Technology<br/>Yuxiang Gao</p>
+    </div>
+    <div class="qr-card">
+      <div class="fake-qr" aria-hidden="true"></div>
+      <p>Replace this with your real GitHub QR code.</p>
+    </div>
+  </footer>
+
+  <audio id="audioPlayer" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
