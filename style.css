@@ -49,3 +49,10 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.045em;margin:0}h1{font-size:clamp(44p
   border-radius: 0 !important;
   object-fit: contain !important;
 }
+.rug-logo {
+  width: 300px !important;
+  height: auto !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  object-fit: contain !important;
+}
