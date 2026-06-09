@@ -84,3 +84,40 @@ window.addEventListener('scroll', () => {
   if(!current) return;
   navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${current.id}`));
 });
+
+// Expandable problem cards
+const cardModal = document.getElementById('cardModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalText = document.getElementById('modalText');
+
+function openProblemModal(card){
+  if(!cardModal || !modalTitle || !modalText) return;
+  modalTitle.textContent = card.dataset.modalTitle || 'Thesis point';
+  modalText.textContent = card.dataset.modalText || '';
+  cardModal.classList.add('open');
+  cardModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeProblemModal(){
+  if(!cardModal) return;
+  cardModal.classList.remove('open');
+  cardModal.setAttribute('aria-hidden', 'true');
+}
+
+document.querySelectorAll('.expand-card').forEach(card => {
+  card.addEventListener('click', () => openProblemModal(card));
+  card.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      openProblemModal(card);
+    }
+  });
+});
+
+document.querySelectorAll('[data-close-modal]').forEach(el => {
+  el.addEventListener('click', closeProblemModal);
+});
+
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape') closeProblemModal();
+});

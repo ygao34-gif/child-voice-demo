@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Child Voice Differentiation</title>
+  <title>Speaker Differentiation in Synthetic Child-Like Voices</title>
   <meta name="description" content="A one-page graduation thesis demo: synthetic child-like voices for speaker differentiation in a VR classroom context." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#problem" aria-label="Go to top">
-      <img src="assets/images/logo-avatar.png" alt="Child Voice Differentiation logo" />
-      <span>Child <strong>Voice</strong><br/>Differentiation</span>
+    <a class="brand thesis-brand" href="#problem" aria-label="Go to top">
+      <img class="rug-logo" src="assets/images/rug-logo.png" alt="University of Groningen logo" />
+      <span class="thesis-title"><strong>Speaker Differentiation in Synthetic Child-Like Voices:</strong><br/>Perceptual Validation and UW-Related Acoustic Evidence from a Zero-Shot Voice Conversion Pipeline</span>
     </a>
     <nav class="top-nav" aria-label="Main navigation">
       <a class="active" href="#problem">Problem</a>
@@ -27,20 +27,24 @@
     <section id="problem" class="hero section-panel">
       <div class="hero-copy reveal">
         <p class="section-kicker purple"><span>01</span> The Problem</p>
-        <h1>Children sound similar.<br/>But how are they <em>actually different?</em></h1>
-        <p class="lead">To create believable and distinct child avatars in VR classroom scenarios, we need a deeper understanding of how child-like voices differ from one another.</p>
+        <h1>In a VR classroom, voices must do more than <em>sound child-like.</em></h1>
+        <p class="lead">Child-avatar voices need to be perceptually distinct enough for student teachers to notice who is speaking and follow classroom interaction.</p>
+        <p class="micro-lead">This thesis asks what makes synthetic child-like voices sound different from one another, and whether a controlled zero-shot voice conversion pipeline can help study that question.</p>
         <div class="problem-cards">
-          <article>
+          <article class="expand-card" role="button" tabindex="0" data-modal-title="Avatar voice identity" data-modal-text="Multiple child avatars need voices that are child-like, distinct, and ethically usable.">
             <div class="card-icon purple-bg">👥</div>
-            <p>Multiple child avatars need voices that are <strong>child-like, distinct, and ethically usable.</strong></p>
+            <h3>Avatar voice identity</h3>
+            <p>Click to expand</p>
           </article>
-          <article>
+          <article class="expand-card" role="button" tabindex="0" data-modal-title="Synthetic voices as a solution" data-modal-text="Synthetic voice generation is controllable, scalable, and flexible, offering an alternative to large-scale real child voice collection.">
             <div class="card-icon yellow-bg">⬡</div>
-            <p>Synthetic voices offer a promising way to generate voice options for different child avatars.</p>
+            <h3>Synthetic voices as a solution</h3>
+            <p>Click to expand</p>
           </article>
-          <article>
+          <article class="expand-card" role="button" tabindex="0" data-modal-title="Academic value" data-modal-text="What makes child-like voices sound different from one another?">
             <div class="card-icon pink-bg">▮▮▮</div>
-            <p>Promising for distinct avatars, but voice identity consistency needs improvement.</p>
+            <h3>Academic value</h3>
+            <p>Click to expand</p>
           </article>
         </div>
       </div>
@@ -183,9 +187,9 @@
 
   <footer id="about" class="site-footer">
     <div>
-      <a class="brand footer-brand" href="#problem">
-        <img src="assets/images/logo-avatar.png" alt="" />
-        <span>Child <strong>Voice</strong><br/>Differentiation</span>
+      <a class="brand footer-brand thesis-brand" href="#problem">
+        <img class="rug-logo" src="assets/images/rug-logo.png" alt="University of Groningen logo" />
+        <span><strong>Speaker Differentiation in Synthetic Child-Like Voices</strong></span>
       </a>
       <p>Understanding speaker differentiation in the child voice space using synthetic child-like speech.</p>
     </div>
@@ -205,6 +209,16 @@
       <p>Replace this with your real GitHub QR code.</p>
     </div>
   </footer>
+
+  <div class="card-modal" id="cardModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Close expanded card" data-close-modal>×</button>
+      <h2 id="modalTitle">Title</h2>
+      <p id="modalText">Text</p>
+      <small>Click outside or press Esc to return.</small>
+    </article>
+  </div>
 
   <audio id="audioPlayer" preload="auto"></audio>
   <script src="script.js"></script>

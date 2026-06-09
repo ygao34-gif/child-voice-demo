@@ -90,3 +90,8 @@ Pipeline popup descriptions are in `script.js` inside the `stageText` object.
 ## Notes
 
 The classroom and avatar images are illustrative design assets for the presentation website. Replace them with approved VR project screenshots or institutional assets if needed.
+
+## Update note
+This version includes the University of Groningen logo downloaded from the official RUG logo database. If your supervisors prefer a faculty/Campus Fryslân variant, replace `assets/images/rug-logo.png` with the approved logo file and keep the same filename.
+
+The three problem cards are expandable. To edit their titles or expanded text, open `index.html` and search for `data-modal-title` and `data-modal-text`.
