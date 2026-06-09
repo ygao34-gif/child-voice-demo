@@ -143,3 +143,27 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.045em;margin:0}h1{font-size:clamp(44p
   color: #111827 !important;
 }
 
+.hero-copy .hero-thesis-title {
+  margin: 18px 0 22px !important;
+  max-width: 620px !important;
+  line-height: normal !important;
+}
+
+.hero-copy .hero-thesis-title .hero-thesis-main {
+  display: block !important;
+  color: #6d4aff !important;
+  font-size: 50px !important;
+  font-weight: 850 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -1.2px !important;
+}
+
+.hero-copy .hero-thesis-title .hero-thesis-sub {
+  display: block !important;
+  color: #111827 !important;
+  font-size: 27px !important;
+  font-weight: 500 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.4px !important;
+  margin-top: 14px !important;
+}
