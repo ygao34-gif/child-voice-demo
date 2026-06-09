@@ -287,3 +287,22 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.045em;margin:0}h1{font-size:clamp(44p
     font-size: 22px;
   }
 }
+
+.demo-select {
+  width: 100%;
+  border: 1px solid #ddd7f6;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 8px 0 14px;
+  background: white;
+  color: #111827;
+  font-weight: 600;
+}
+
+.target-voice-img {
+  cursor: pointer;
+}
+
+.target-voice-img:hover {
+  outline: 3px solid rgba(112, 71, 232, 0.35);
+}
