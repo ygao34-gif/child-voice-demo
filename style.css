@@ -723,14 +723,14 @@ body.insight-modal-open {
 }
 
 .footer-demo-logo {
-  width: 100%;
-  max-width: 260px;
+  width: auto;
+  max-width: 170px;
+  max-height: 95px;
   height: auto;
-  max-height: 150px;
   object-fit: contain;
-  border-radius: 14px;
+  border-radius: 12px;
   background: #ffffff;
-  padding: 10px;
+  padding: 8px;
 }
 
 .footer-github-link {
