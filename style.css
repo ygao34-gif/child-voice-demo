@@ -771,3 +771,41 @@ body.insight-modal-open {
     text-align: left;
   }
 }
+
+/* =========================================
+   Final Our Solution diagram responsive fix
+   ========================================= */
+
+.solution .diagram-image-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 28px auto 0 !important;
+  padding: 18px !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.solution .full-diagram-image {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  border-radius: 20px !important;
+}
+
+@media (max-width: 900px) {
+  .solution .diagram-image-wrapper {
+    width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .solution .full-diagram-image {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+}
