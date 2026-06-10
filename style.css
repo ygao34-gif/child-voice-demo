@@ -548,3 +548,193 @@ body.insight-modal-open {
     line-height: 1.65;
   }
 }
+
+/* =========================================
+   Final Insights section alignment fix
+   ========================================= */
+
+.insights {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.insight-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.insight-grid .insight-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 230px;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(255, 166, 0, 0.12);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 14px 35px rgba(100, 80, 30, 0.08);
+  cursor: pointer;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.insight-grid .insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(40, 120, 90, 0.12);
+  border-color: rgba(93, 201, 151, 0.55);
+}
+
+.insight-grid .insight-card:focus-visible {
+  outline: 3px solid rgba(126, 200, 255, 0.85);
+  outline-offset: 4px;
+}
+
+.insight-grid .insight-card span {
+  display: block;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--purple);
+  margin-bottom: 18px;
+}
+
+.insight-grid .insight-card h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+.insight-grid .insight-card p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Keep the modal centered and independent from card layout */
+.insight-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(20, 35, 32, 0.38);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.22s ease,
+    visibility 0.22s ease;
+  z-index: 9999;
+}
+
+.insight-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.insight-modal {
+  position: relative;
+  width: min(92vw, 640px);
+  padding: 34px 36px 32px;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top left, rgba(218, 255, 239, 0.9), transparent 42%),
+    #ffffff;
+  border: 1px solid rgba(111, 212, 166, 0.42);
+  box-shadow: 0 28px 80px rgba(20, 60, 48, 0.22);
+  transform: translateY(12px) scale(0.96);
+  transition: transform 0.24s ease;
+}
+
+.insight-modal-overlay.is-open .insight-modal {
+  transform: translateY(0) scale(1);
+}
+
+.insight-modal h3 {
+  margin: 0 42px 14px 0;
+  color: #24332f;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+.insight-modal p {
+  margin: 0;
+  color: #4a5b56;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  max-width: 58ch;
+}
+
+.insight-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(237, 250, 244, 0.95);
+  color: #24332f;
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(20, 60, 48, 0.10);
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease;
+}
+
+.insight-modal-close:hover {
+  transform: rotate(6deg) scale(1.05);
+  background: rgba(213, 247, 231, 1);
+}
+
+body.insight-modal-open {
+  overflow: hidden;
+}
+
+/* Responsive layout */
+@media (max-width: 1100px) {
+  .insights {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .insight-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .insight-grid .insight-card {
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .insight-grid .insight-card span {
+    font-size: 40px;
+  }
+
+  .insight-modal {
+    padding: 28px 24px 26px;
+    border-radius: 24px;
+  }
+
+  .insight-modal p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+}
