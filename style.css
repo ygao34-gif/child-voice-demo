@@ -651,3 +651,123 @@ body.insight-modal-open {
     font-size: 40px !important;
   }
 }
+
+/* =========================================
+   Footer final layout update
+   ========================================= */
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1.15fr 0.6fr 0.9fr 1fr;
+  gap: 42px;
+  align-items: start;
+  padding: 48px;
+  background: #10253d;
+  color: #ffffff;
+}
+
+.footer-thesis-info p,
+.footer-supervisors p,
+.site-footer a {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 360px;
+}
+
+.footer-rug-logo {
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.footer-brand-block strong {
+  display: block;
+  color: #8a6bff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.25;
+  max-width: 330px;
+}
+
+.footer-thesis-info p {
+  max-width: 390px;
+  margin-top: 18px;
+}
+
+.footer-supervisors p {
+  margin: 12px 0 18px;
+  line-height: 1.55;
+}
+
+.footer-supervisors strong {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.footer-demo-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  padding: 24px;
+  min-height: 200px;
+}
+
+.footer-demo-logo {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.footer-github-link {
+  display: inline-flex;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-github-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    padding: 36px 24px;
+  }
+
+  .footer-rug-logo {
+    width: 220px;
+  }
+
+  .footer-demo-logo-card {
+    align-items: flex-start;
+  }
+
+  .footer-github-link {
+    text-align: left;
+  }
+}
