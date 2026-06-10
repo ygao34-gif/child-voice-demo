@@ -91,63 +91,12 @@
         <small>Scroll down to see how it works</small>
       </div>
 
-      <div id="pipeline" class="pipeline-wrap reveal delay-1" aria-label="Voice generation and evaluation pipeline">
-        <div class="flow-line"></div>
-
-        <button class="pipe-card" data-stage="motivation">
-          <span class="icon">💡</span>
-          <strong>Motivation</strong>
-        </button>
-
-        <button class="pipe-card" data-stage="pipeline">
-          <span class="icon">〽️</span>
-          <strong>Voice Generation Pipeline</strong>
-        </button>
-
-        <div class="pipe-stack">
-          <button class="mini-stage" data-stage="text">📄 Text</button>
-          <button class="mini-stage" data-stage="tts">🔊 TTS</button>
-          <button class="mini-stage" data-stage="source">〽️ Source Speech</button>
-          <button class="mini-stage" data-stage="target">👤 Target Voice</button>
-          <button class="mini-stage" data-stage="seed">✨ Seed-VC</button>
-          <button class="mini-stage output" data-stage="synthetic">🧒 Synthetic Child-like Stimuli</button>
-        </div>
-
-        <button class="pipe-card" data-stage="listening">
-          <span class="icon">🎧</span>
-          <strong>Listening Test</strong>
-        </button>
-
-        <button class="pipe-card" data-stage="broad">
-          <span class="icon">🔍</span>
-          <strong>Pilot / Broad Acoustic Exploration</strong>
-        </button>
-
-        <button class="pipe-card focus" data-stage="uw">
-          <span class="icon">▮▮▮</span>
-          <strong>Focused UW Related Vowel Study</strong>
-        </button>
-
-        <button class="pipe-card outcome" data-stage="evidence">
-          <span class="icon">📈</span>
-          <strong>Supporting Computational Evidence</strong>
-        </button>
-
-        <button class="adult-control" data-stage="adult">👤 Adult Control</button>
-      </div>
-
-      <aside class="stage-panel reveal" id="stagePanel" aria-live="polite">
-        <strong>Click a pipeline stage</strong>
-        <p>Select any block to show its role. The demo section below lets you choose a sentence, adult TTS source voice, target voice, and synthetic child-like output.</p>
-      </aside>
-
-      <div class="legend reveal">
-        <span><i class="purple-line"></i> Input</span>
-        <span><i class="green-line"></i> Processing</span>
-        <span><i class="orange-line"></i> Evaluation</span>
-        <span><i class="pink-line"></i> Focus</span>
-        <span><i class="blue-line"></i> Outcome</span>
-        <span><i class="dash-line"></i> Control / Feedback</span>
+      <div id="pipeline" class="diagram-image-wrapper reveal delay-1">
+       <img
+        src="assets/images/Diagram.png"
+        alt="Thesis pipeline diagram"
+        class="full-diagram-image"
+       />
       </div>
     </section>
 
