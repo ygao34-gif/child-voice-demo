@@ -397,4 +397,69 @@ document.querySelectorAll(".voice-card .synthetic-btn").forEach((button) => {
 document.getElementById("sentenceSelect")?.addEventListener("change", updateDemoSelectionPreview);
 document.getElementById("adultVoiceSelect")?.addEventListener("change", updateDemoSelectionPreview);
 
+/* =========================================
+   Insights modal interaction
+   ========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const insightCards = document.querySelectorAll(".insight-card");
+  const modalOverlay = document.getElementById("insightModalOverlay");
+  const modalTitle = document.getElementById("insightModalTitle");
+  const modalText = document.getElementById("insightModalText");
+  const modalClose = document.getElementById("insightModalClose");
+
+  if (!insightCards.length || !modalOverlay || !modalTitle || !modalText || !modalClose) {
+    return;
+  }
+
+  function openInsightModal(card) {
+    const title = card.dataset.title || "";
+    const detail = card.dataset.detail || "";
+
+    modalTitle.textContent = title;
+    modalText.textContent = detail;
+
+    modalOverlay.classList.add("is-open");
+    modalOverlay.setAttribute("aria-hidden", "false");
+    document.body.classList.add("insight-modal-open");
+
+    modalClose.focus();
+  }
+
+  function closeInsightModal() {
+    modalOverlay.classList.remove("is-open");
+    modalOverlay.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("insight-modal-open");
+  }
+
+  insightCards.forEach((card) => {
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+
+    card.addEventListener("click", () => {
+      openInsightModal(card);
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openInsightModal(card);
+      }
+    });
+  });
+
+  modalClose.addEventListener("click", closeInsightModal);
+
+  modalOverlay.addEventListener("click", (event) => {
+    if (event.target === modalOverlay) {
+      closeInsightModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modalOverlay.classList.contains("is-open")) {
+      closeInsightModal();
+    }
+  });
+});
 updateDemoSelectionPreview();
